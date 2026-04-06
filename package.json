@@ -1,0 +1,54 @@
+{
+  "name": "beat-detection",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Beat detection: onset detection, tempo estimation, beat grid",
+  "exports": {
+    ".": "./index.js",
+    "./onset.js": "./onset.js",
+    "./tempo.js": "./tempo.js",
+    "./detect.js": "./detect.js"
+  },
+  "files": [
+    "index.js",
+    "onset.js",
+    "tempo.js",
+    "detect.js"
+  ],
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/audiojs/beat-detection.git"
+  },
+  "keywords": [
+    "beat",
+    "beat-detection",
+    "bpm",
+    "tempo",
+    "onset",
+    "onset-detection",
+    "rhythm",
+    "audio",
+    "dsp",
+    "signal-processing",
+    "music"
+  ],
+  "author": "Dmitry Iv. <dfcreative@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/audiojs/beat-detection/issues"
+  },
+  "homepage": "https://github.com/audiojs/beat-detection#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "fourier-transform": "^2.0.0",
+    "window-function": "^3.0.0"
+  },
+  "devDependencies": {
+    "tst": "^9.4.0"
+  }
+}
