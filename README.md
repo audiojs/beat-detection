@@ -320,13 +320,7 @@ Use `detect` for uniform grids, `beatTrack` for adaptive (rubato-aware) placemen
 
 ### Methodology
 
-Samples are **synthesized** using FM-synthesis drum patterns in `synth.js` (not published, included in the repo for testing). No external audio files or datasets are required — the benchmark is fully self-contained and deterministic.
-
-**Styles tested:** clicks (pure metronome), rock, EDM, hip-hop, disco, jazz (swing), reggae (offbeat skank), funk, ballad, breakbeat. Each style is generated at 10 BPM points: 70, 80, 90, 100, 110, 120, 130, 140, 160, 180.
-
-**Reproducing:** run `node test.js` — the accuracy table prints to console as part of the test suite. No external dependencies beyond `npm install`.
-
-**Real-music sanity test:** the suite also renders a real, deterministic music track — a [floatbeat](https://dollchan.net/bytebeat/) by RealZynx92 (*sanxion loader music*, 125 BPM declared in the formula) — and verifies `detect` recovers 125 BPM exactly. No audio files, no randomness — the tune is generated from a short JavaScript expression.
+Fully self-contained: FM-synthesis drum patterns (`synth.js`) generate deterministic test signals across 10 styles × 10 BPMs. No external audio files. Also tests against a deterministic [floatbeat](https://dollchan.net/bytebeat/) track (125 BPM). Run `node test.js` to reproduce.
 
 ### Known limitations
 
